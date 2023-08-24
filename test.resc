@@ -7,11 +7,11 @@ $name?="nrf52840"
 
 using sysbus
 mach create $name
-machine LoadPlatformDescription @platforms/boards/miv-board.repl
+machine LoadPlatformDescription @platforms/boards/nrf52840.repl
 
 $bin?=@nrf52840_xxaa.elf
 
-showAnalyzer uart
+showAnalyzer uart0
 
 macro reset
 """
