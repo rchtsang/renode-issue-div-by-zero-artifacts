@@ -1,3 +1,18 @@
+# Fail to Trap Integer Division by Zero on Cortex-M3/4
+
+(see section 4.3.7 and 4.3.10 of Cortex-M4 Generic User Guide)
+enabling DIV_0_TRP bit on SCB->CCR should cause fault exception when sdiv/udiv by 0 detected. this behavior appears to be missing. this repository contains a toy example using uart that should trigger the exception when the device is sent an "e" or "E" character. instead, the emulator continues as normal.
+
+- board: nRF52840
+- sdk: nRF5_SDK_17.0.2
+- compiler: arm-none-eabi-gcc (xPack GNU Arm Embedded GCC arm64) 11.3.1 20220712
+
+note: nrf5 sdk is not included in this repository and needs to be downloaded from the nordic website for reproduction.
+
+
+
+---
+
 # Renode issue reproduction template
 
 This repository is meant to help report issues in (and provide contributions to) the open source [Renode simulation framework](https://renode.io).

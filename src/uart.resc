@@ -1,0 +1,17 @@
+:name: uart
+:description: renode script for running nrf52840 uart example with uart connection
+
+using sysbus
+
+mach create
+machine LoadPlatformDescription @platforms/cpus/nrf52840.repl
+
+$bin=@/Users/rtsang/Documents/Research/tools/learn-renode/examples/nrf52840/uart/pca10056/blank/armgcc/_build/nrf52840_xxaa.bin
+
+showAnalyzer uart0
+
+macro reset
+"""
+    sysbus LoadBinary $bin 0
+"""
+runMacro $reset

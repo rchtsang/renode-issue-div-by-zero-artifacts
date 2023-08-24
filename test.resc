@@ -3,13 +3,13 @@
 # Make this repository as self contained as possible.
 #
 
-$name?="Mi-V"
+$name?="nrf52840"
 
 using sysbus
 mach create $name
 machine LoadPlatformDescription @platforms/boards/miv-board.repl
 
-$bin?=@https://dl.antmicro.com/projects/renode/shell-demo-miv.elf-s_803248-ea4ddb074325b2cc1aae56800d099c7cf56e592a
+$bin?=@nrf52840_xxaa.elf
 
 showAnalyzer uart
 

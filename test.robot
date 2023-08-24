@@ -20,8 +20,7 @@ Load Script
 Should Run Test Case
     Load Script
     Start Emulation
-    Wait For Prompt On Uart     uart:~$
-    Write Line To Uart
-    Wait For Prompt On Uart     uart:~$
-    Write Line To Uart          demo ping
-    Wait For Line On Uart       pong
+    Wait For Prompt On Uart     UART example started.
+    Write Line To Uart          e
+    Wait For Line On Uart       Error!
+    
